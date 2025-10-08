@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Invitación - Luciana 11 años</title>
+<style>
+  :root{
+    --bg1: #FFF8FF;
+    --bg2: #FFF3FB;
+    --card: #ffffffdd;
+    --accent: #FFB6D5;
+    --accent2: #C8A2FF;
+    --muted: #6b4b5a;
+    font-family: "Poppins", "Helvetica Neue", Arial, sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background: linear-gradient(180deg,var(--bg1),var(--bg2));
+    padding:24px;
+    overflow:hidden;
+  }
+
+  /* moving confetti/particles */
+  .scene{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+  }
+  .particle{
+    position:absolute;
+    width:14px;height:14px;
+    border-radius:50%;
+    opacity:0.9;
+    transform:translateY(0);
+    animation:floatUp linear infinite;
+    filter:drop-shadow(0 6px 12px rgba(0,0,0,0.06));
+  }
+  @keyframes floatUp {
+    0%{ transform:translateY(110vh) rotate(0) scale(0.9); opacity:0}
+    10%{ opacity:1}
+    100%{ transform:translateY(-20vh) rotate(480deg) scale(1); opacity:0.95}
+  }
+
+  /* centered card */
+  .card{
+    position:relative;
+    width:100%;
+    max-width:680px;
+    background:var(--card);
+    border-radius:20px;
+    box-shadow:0 20px 50px rgba(95,43,77,0.12);
+    padding:28px;
+    text-align:center;
+    z-index:3;
+    overflow:visible;
+  }
+
+  /* cute skull (inline svg container) */
+  .hero{
+    width:140px;height:140px;margin:0 auto 12px;
+    display:flex;align-items:center;justify-content:center;
+    transform-origin:center;
+    animation:pop 900ms ease;
+  }
+  @keyframes pop {
+    0%{ transform:scale(.6) }
+    60%{ transform:scale(1.06) }
+    100%{ transform:scale(1) }
+  }
+
+  .title{
+    font-size:26px;
+    margin:6px 0;
+    color:#4b2a3d;
+    letter-spacing:0.2px;
+    font-weight:700;
+  }
+  .subtitle{ color:var(--muted); margin:6px 0 14px 0; font-size:15px }
+
+  .text{
+    font-size:16px;
+    color:#5b3b4a;
+    line-height:1.5;
+    margin:12px auto;
+    max-width:520px;
+  }
+
+  /* animated entrance for lines */
+  .line{
+    opacity:0;
+    transform:translateY(6px);
+    animation:fadeInUp 700ms ease forwards;
+  }
+  .line.delay-1{ animation-delay:350ms }
+  .line.delay-2{ animation-delay:650ms }
+  .line.delay-3{ animation-delay:900ms }
+
+  @keyframes fadeInUp {
+    to{ opacity:1; transform:translateY(0) }
+  }
+
+  /* WhatsApp button */
+  .actions{ display:flex; gap:12px; justify-content:center; margin-top:18px; flex-wrap:wrap }
+  .btn{
+    pointer-events:auto;
+    text-decoration:none;
+    border-radius:12px;
+    padding:12px 18px;
+    font-weight:700;
+    font-size:15px;
+    background: linear-gradient(180deg,var(--accent),var(--accent2));
+    color:#4b2540;
+    box-shadow:0 10px 28px rgba(203,128,197,0.18);
+    display:inline-flex;
+    gap:10px;
+    align-items:center;
+  }
+  .btn.white{
+    background:#fff;
+    border:1px solid #f0e6f4;
+    box-shadow:0 8px 20px rgba(95,43,77,0.06);
+    color:#6b3b51;
+  }
+  .btn:active{ transform:translateY(2px) }
+
+  footer{ margin-top:14px; color:#8a6f81; font-size:13px }
+
+  /* small floating skulls for vibe */
+  .floating-skull{
+    position:absolute;
+    width:62px;height:62px;
+    z-index:1;
+    opacity:0.95;
+    animation:floatSkull 6s ease-in-out infinite;
+  }
+  @keyframes floatSkull {
+    0%{ transform:translateY(0) rotate(-6deg) }
+    50%{ transform:translateY(-16px) rotate(6deg) }
+    100%{ transform:translateY(0) rotate(-6deg) }
+  }
+
+  /* responsive */
+  @media (max-width:420px){
+    .card{ padding:18px; border-radius:16px }
+    .hero{ width:110px;height:110px }
+    .title{ font-size:20px }
+  }
+</style>
+</head>
+<body>
+  <!-- decorative animated particles (confetti/hearts) -->
+  <div class="scene" aria-hidden="true">
+    <!-- We'll generate several particles via JS for random positions -->
+  </div>
+
+  <!-- cute skull floating on the side -->
+  <img class="floating-skull" src="data:image/svg+xml;utf8,
+  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='%23FFDDEE'/><stop offset='1' stop-color='%23FFF1F8'/></linearGradient></defs><g><rect rx='20' width='120' height='120' fill='none'/><g transform='translate(20,15)'><ellipse cx='40' cy='35' rx='36' ry='34' fill='%23fff5fb' stroke='%23ffd9ed' stroke-width='3'/><circle cx='24' cy='30' r='6' fill='%234b2a3d'/><circle cx='56' cy='30' r='6' fill='%234b2a3d'/><path d='M18 48 Q38 66 58 48' stroke='%234b2a3d' stroke-width='4' fill='none' stroke-linecap='round'/><rect x='10' y='44' width='12' height='8' rx='2' fill='%23ffd5e8'/></g></g></svg>"
+  style="right:8%; top:8%;">
+
+  <div class="card" role="main" aria-labelledby="title">
+    <div class="hero" aria-hidden="true">
+      <!-- original cute-skull svg (not trademarked) -->
+      <svg width="140" height="140" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cute skull">
+        <defs>
+          <linearGradient id="grad" x1="0" x2="1">
+            <stop offset="0" stop-color="#FFF1F8"/>
+            <stop offset="1" stop-color="#FFE8F2"/>
+          </linearGradient>
+        </defs>
+        <g transform="translate(10,6)">
+          <ellipse cx="50" cy="50" rx="46" ry="44" fill="url(#grad)" stroke="#FFD6EC" stroke-width="3"/>
+          <circle cx="34" cy="40" r="7" fill="#4b2a3d"/>
+          <circle cx="66" cy="40" r="7" fill="#4b2a3d"/>
+          <path d="M28 68 Q48 86 68 68" stroke="#4b2a3d" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <rect x="20" y="60" width="12" height="8" rx="2" fill="#FFD6EC"/>
+          <rect x="62" y="60" width="12" height="8" rx="2" fill="#FFD6EC"/>
+          <circle cx="90" cy="20" r="6" fill="#FFDDF0" opacity="0.9"/>
+        </g>
+      </svg>
+    </div>
+
+    <h1 id="title" class="title line delay-1">🌈 ¡Luciana cumple 11 añitos! 🎉</h1>
+    <p class="subtitle line delay-2">Ven a celebrar con nosotras en Palmetum Park</p>
+
+    <div class="text line delay-3" role="article" aria-label="Detalles de la fiesta">
+      <strong>Fecha:</strong> 25 de octubre<br>
+      <strong>Hora:</strong> 5:00 p.m.<br>
+      <strong>Lugar:</strong> Conjunto Residencial Palmetum Park<br>
+      <em>¡Habrá sorpresas, dulces y mucha diversión! 💕</em>
+    </div>
+
+    <div class="actions" style="margin-top:18px;">
+      <!-- WhatsApp: mensaje prellenado hacia tu número -->
+      <a class="btn" id="wa" href="https://wa.me/573155051305?text=Hola%2C%20confirmo%20asistencia%20a%20la%20fiesta%20de%20Luciana%20Tello%20Viera.%20Nombre%20del%20invitado%3A%20" target="_blank" rel="noopener" aria-label="Confirmar asistencia por WhatsApp">
+        ✅ Confirmar por WhatsApp
+      </a>
+
+      <!-- También dejamos opción de copiar texto si alguien quiere personalizar -->
+      <button class="btn white" id="copyBtn" aria-label="Copiar texto de confirmación">
+        📋 Copiar mensaje
+      </button>
+    </div>
+
+    <footer>Al tocar "Confirmar por WhatsApp" se abrirá WhatsApp para enviar la confirmación.</footer>
+  </div>
+
+<script>
+  // generate decorative particles randomly
+  const scene = document.querySelector('.scene');
+  const colors = ['#FFB6D5','#FFD8E8','#C8A2FF','#FFF1F6','#B0F0E0'];
+  const shapes = ['circle','square','heart'];
+  const total = 22;
+  for(let i=0;i<total;i++){
+    const p = document.createElement('div');
+    p.className = 'particle';
+    const size = Math.floor(Math.random()*14)+10;
+    p.style.width = size+'px';
+    p.style.height = (shapes[i%3]==='square' ? size+'px' : size+'px');
+    p.style.left = Math.random()*100 + 'vw';
+    p.style.top = Math.random()*80 + 'vh';
+    p.style.background = colors[i%colors.length];
+    p.style.borderRadius = (shapes[i%3]==='square' ? '4px' : '50%');
+    p.style.animationDuration = (6 + Math.random()*8) + 's';
+    p.style.animationDelay = (Math.random()*2) + 's';
+    scene.appendChild(p);
+  }
+
+  // copy button
+  document.getElementById('copyBtn').addEventListener('click', () => {
+    const txt = "Hola, confirmo asistencia a la fiesta de Luciana Tello Viera. Nombre del invitado: ";
+    navigator.clipboard.writeText(txt).then(()=>{
+      const old = document.getElementById('copyBtn').innerText;
+      document.getElementById('copyBtn').innerText = "Copiado ✅";
+      setTimeout(()=> document.getElementById('copyBtn').innerText = old,1600);
+    });
+  });
+
+  // small accessibility: focus the whatsapp button on load
+  window.addEventListener('load', ()=> {
+    const btn = document.getElementById('wa');
+    btn.setAttribute('tabindex','0');
+  });
+</script>
+</body>
+</html>
